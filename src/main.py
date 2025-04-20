@@ -1,8 +1,8 @@
-from crews.ai_impact_crew import ai_impact_crew
+from crews.report_crew import report_crew
 from IPython.display import display, Markdown
 
 if __name__ == "__main__":
     print("### Crew kickoff ###")
-    result = ai_impact_crew.kickoff()
+    result = report_crew.kickoff()
     display(Markdown(result.raw))
     print("### Task completed ###")

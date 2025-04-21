@@ -1,9 +1,6 @@
 from crewai import Agent
 from langchain_openai import ChatOpenAI
-from config.settings import OPENAI_API_KEY
-import os
-
-os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
+from common.config.settings import OPENAI_API_KEY
 
 writer = Agent(
     role="Writer",

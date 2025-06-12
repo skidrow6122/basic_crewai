@@ -1,8 +1,9 @@
 import os
 import warnings
 warnings.filterwarnings("ignore")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "xxxxxxx")
-SERPER_API_KEY = os.getenv("SERPER_API_KEY", "xxxxxxx") # google search API
+os.environ['OPENAI_API_KEY'] = 'xxxxxxx'
+os.environ['SERPER_API_KEY'] = 'xxxxxxx'  # google search API
+
 
 from crewai import Agent, Task, Crew
 from crewai.process import Process
@@ -65,5 +66,3 @@ newsletter_crew = Crew(
 # Execute tasks
 result = newsletter_crew.kickoff()
 display(Markdown(result.raw))
-
-
